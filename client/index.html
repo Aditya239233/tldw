@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+			body {
+				width: 300px;
+			}
+			.box {
+				display: flex;
+				width: 300px;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h2 style="text-align: center">Drag to modify summary size</h2>
+			<input id="slider" type="range" min="5" max="50" value="10" /> <br />
+			<button id="summaryButton">Get Summary</button>
+			<script src="popup.js"></script>
+			<h4 id="messages"></h4>
+		</div>
+	</body>
+</html>
