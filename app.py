@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)
 PORT = os.getenv('PORT',8000)
 NLP = spacy.load("en_core_web_sm")
-API_KEY = json.load(open("config.json"))
+API_KEY = json.load(open("config.json"))['API']
 
 
 def get_transcript(video_id, percent):
@@ -33,11 +33,10 @@ def get_summary(transcript, percent):
         article += sentence.text+".\n "
         num_sentences += 1
     summary_length= round(float(percent)*num_sentences)
-    
+    print(article)
     api_url= ("http://api.smmry.com/&SM_API_KEY=%s&SM_LENGTH=%s" 
 			% (API_KEY,summary_length))
     r = requests.post(api_url, data={"sm_api.input":article})
-
     if "sm_api_content" not in r.json():
         return {"error":"No transcript found, or transcript too short!"}
     return {"result":r.json()["sm_api_content"]}
@@ -48,8 +47,9 @@ def endpoint():
 
 @app.route("/summarize")
 def summarize():
+    print(API_KEY)
     video_id = request.args.get("video_id")
-    percentage = request.args.get("percentage")
+    percentage = float(request.args.get("percentage"))
     response = get_transcript(video_id, percentage)
     return response
 

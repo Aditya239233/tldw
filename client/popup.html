@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<style>
 			body {
@@ -12,13 +12,17 @@
 				justify-content: center;
 				flex-direction: column;
 			}
+			#slider {
+			}
+			button {
+			}
 		</style>
 	</head>
 	<body>
 		<div class="box">
-			<h2 style="text-align: center">Drag to modify summary size</h2>
+			<h2 style="text-align: center">Drag to modify the summary size</h2>
 			<input id="slider" type="range" min="5" max="50" value="10" /> <br />
-			<button id="summaryButton">Get Summary</button>
+			<button id="summaryButton">Generate Summary</button>
 			<script src="popup.js"></script>
 			<h4 id="messages"></h4>
 		</div>
