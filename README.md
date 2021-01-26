@@ -2,7 +2,7 @@
 
 tldw - too long didn't watch. A YouTube chrome extension
 
-<br><br>
+<br>
 ![](./assets/example.gif)
 
 ## Getting Started
@@ -12,3 +12,7 @@ tldw - too long didn't watch. A YouTube chrome extension
 3. Click "LOAD UNPACKED"
 4. Select the "client" directory from the cloned repo
 5. Restart Chrome
+
+## Todo
+
+[] create a custom text summarizer
