@@ -2,7 +2,7 @@
 
 tldw - too long didn't watch. A YouTube chrome extension
 
-<br>
+
 ![](./assets/example.gif)
 
 ## Getting Started
