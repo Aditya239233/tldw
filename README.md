@@ -15,4 +15,4 @@ tldw - too long didn't watch. A YouTube chrome extension
 
 ## Todo
 
-[] create a custom text summarizer
+- [ ] create a custom text summarizer
