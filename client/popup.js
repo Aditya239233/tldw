@@ -1,7 +1,7 @@
 async function getSummary(video_id) {
 	let percentage = document.getElementById('slider').value / 100;
 	let summary = await fetch(
-		`https://tldw-backend.herokuapp.com/summarize?video_id=${video_id}&percentage=${percentLengthOfSummary}`,
+		`https://tldw-backend.herokuapp.com/summarize?video_id=${video_id}&percentage=${percentage}`,
 		{
 			method: 'GET',
 		}
